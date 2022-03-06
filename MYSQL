@@ -8,4 +8,4 @@ drop database if not exists 数据库名；  使用 :use 数据库名；
 DDL(查询数据库中的表)：查询当前数据库所有表show tables;  查询表结构desc 表名；    查询指定表的建表语句 show create table 表名; 建表的格式create table I_user( 字段 类型 注释注意最后一个字段没有逗号）
 DDL表操作数据：数据类型：数值类型，字符串类型，日期时间类型
 数值类型：tinyint 1字节 smallint2 unsigned signed  decimat依赖于精度和标度如12.20 age tinyint unsigned使用无符号一个字节节省空间   score double(4,1)代表长度和小数位度
-字符串类型：char定长字符串  varchar变长字符串 blob二进制形式的长文本数据0-65535  char(1)就算存储一个字符也占用十个字符的空间（性能高），varchar()存多少占用多少的字符空间（性能差根据计算占用的空间），如用户民用varchar()边长  gender用char      日期类型：date描述年月日  datetime年月日和时间
+字符串类型：char定长字符串  varchar变长字符串 blob二进制形式的长文本数据0-65535  char(10)就算存储一个字符也占用十个字符的空间（性能高），varchar()存多少占用多少的字符空间（性能差根据计算占用的空间），如用户民用varchar()边长  gender用char      日期类型：date描述年月日  datetime年月日和时间
