@@ -1,0 +1,8 @@
+一：数据库基本概念
+数据库database 数据库管理系统database management system(DBMS)
+关系型数据库：表
+SQL:mysql数据库sql语句不区分大小写，关键字建议大写 注释：单行注释：--或#  多行注释/*内容*/
+sql分类：DDL数据定义语言 DML（库表字段）(manipulation)（表的增删改查）操作语言： DCL控制语言（控制用户的访问权限） DQL查询语言（查表得记录）
+DDL（数据库操作）：查询所有数据库 show databases;     查询当前数据库：select database();   创建 create database [if not exists] 数据库名  [default charset字符集][collate排序规则]；
+drop database if not exists 数据库名；  使用 :use 数据库名；
+DDL(查询数据库中的表)：查询当前数据库所有表show tables;  查询表结构desc 表名；    查询指定表的建表语句 show create table 表名; 建表的格式create table I_user( 字段 类型 注释注意最后一个字段没有逗号）
