@@ -29,3 +29,31 @@ desc 表名;查看表的结构
 show create table 表名；查看创建表的所有信息
 alter table 表名 add/modify/change/drop/rename to
 drop table 表名；
+SQLDML介绍数据操作语言 data manipulation language,对数据库中表的数据纪律进行增删改操作
+添加数据insert
+修改数据updata
+删除数据deleteao 
+DML添加字段
+给指定字段添加数据
+insert into 表名 （字段1，字段2.，，，） value (值1，值2)；
+给全部字段添加数据
+insert into 表名 value();
+批量添加数据
+insert into 表名（字段名1，） value(值1，)；
+insert into 表名 value（）；
+注意插入数据时，字段与值顺序对应
+字符串和日期型数据应该包含在引号中，插入数据的大小在字段的规定范围内
+select *from 表名；查询表的数据
+插入数据
+insert into 表（） values();一一对应
+insert into employee values(1,2,3,4,5,6)；给全部字段插入数据
+insert into employee values(6,5,3,4,2,1),(9,87,7,5,4,3);批量添加多个数据用逗号隔开
+update employee set name = 'itheima' where id=9;
+update employee set idcard=233;修改的语句可以有也可没有，没有则会修改表的所有数据
+DML删除数据
+ delete from employee;删除表中的所有数据
+  delete from employee where gender=4;删除表中的指定数据
+  delete如果没有条件则删除所有的数据
+  总结；1.添加数据:insert into 表名(字段1，字段2.,,,) values(值1，指2);
+  2，修改数据 update 表名 set 字段名值1，字段=值2 where=条件；
+  3.删除数据：delete from 表名 （where条件）；
