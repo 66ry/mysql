@@ -57,3 +57,15 @@ DML删除数据
   总结；1.添加数据:insert into 表名(字段1，字段2.,,,) values(值1，指2);
   2，修改数据 update 表名 set 字段名值1，字段=值2 where=条件；
   3.删除数据：delete from 表名 （where条件）；
+  DQL:数据查询语言 关键字select
+  语法select字段列表 from表名列表 where条件列表 group by分组字段列表 having分子组后条件列表 order by排序字段列表 limit 分页参数
+  基本查询：
+  1.查询指定字段 name,workno,age返回 select name,workno,age from 表名；
+  2.查询所有字段返回 select *from 表名；
+  3.查询所有员工的工作地址，起别名 select name as '别名' from 表名；
+  4.查询公司员工的上班地址（不重复）
+  select distinct workadress '工作地址' from 表名；
+  条件查询
+  语法  select 字段名 from 表名 where 条件列表； 条件；比较运算符，逻辑运算符and && （多条件同时成立） or ||(多条件一个成立)，not !（非）
+  
+ 
