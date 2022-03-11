@@ -148,4 +148,5 @@ DML删除数据
   show grants for 'hemai'@'%';
   授予权限 grant all on itcase.* to 'hemai'@'%';
   撤销权限 revoke all itcase.* 'hemai'@'%';
+  二：函数
   
