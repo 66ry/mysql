@@ -148,5 +148,6 @@ DML删除数据
   show grants for 'hemai'@'%';
   授予权限 grant all on itcase.* to 'hemai'@'%';
   撤销权限 revoke all itcase.* 'hemai'@'%';
-  二：函数
+  二：函数一段被另一段调用得函数
+  concat(s1,s2)字符串拼接  lower() upper()字符串转换大小写，lpad(str,n,pad)左填充，rpad(),trim()去掉字符串头部和尾部空格 substriing(str,start,len)返回从star开始到len结束长度
   
