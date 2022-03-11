@@ -121,7 +121,31 @@ DML删除数据
   having 分组后条件列表 
   order by 排列字段列表 5
   limit 分页参数 6
+  DCL数据控制语言，管理数据用户，控制数据库得访问权限
+  DCL:
+  查询用户
+  use mysql;
+  select *from user;
+  2.创建用户
+  create user '用户名'@‘主机名’ identified by '密码'；
+  3.修改用户密码
+  alter user '用户名'@‘主机名’ identified with mysql_native_password by '新密码'；
+  4.删除用户
+  drop user '用户名'@‘主机名’；注意：主机名可以用%搭配，
+  创建用户itcase,只能在当前主机localhost访问，密码123456
+  create user 'itcase' @'localhose' identified by '123456';
+  创建用户heima，可以在任意主机访问该数据
+  create user 'heima'@'%' identified by '123456';4
+  修改用户得heima得访问密码为1234
+  alter user 'heima'@'%' identified with mysql_native_password by '1234';
+  删除itcase@localhost用户
+  drop user 'itcase'@'localhost';
+  DCL权限控制
+  1.查询权限 show grants for '用户名‘@’主机名‘；
+  2.授予权限 grants 权限列表 数据库名.表名 to '用户名‘@’主机名‘；
+  3.撤销权限 remove 权限列表 on 数据库名.表名 form '用户名‘@’主机名‘；
+  查询权限
+  show grants for 'hemai'@'%';
+  授予权限 grant all on itcase.* to 'hemai'@'%';
+  撤销权限 revoke all itcase.* 'hemai'@'%';
   
-  
-  
- 
